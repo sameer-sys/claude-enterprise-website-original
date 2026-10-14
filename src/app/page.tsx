@@ -57,14 +57,7 @@ exit
   };
 
   const handleDownloadAndroid = () => {
-    const androidPayload = `[InternetShortcut]\nURL=https://claude-enterprise-app.vercel.app\nIconIndex=0`;
-    const blob = new Blob([androidPayload], { type: 'application/octet-stream' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Claude-OpenWork-Mobile.url';
-    a.click();
-    URL.revokeObjectURL(url);
+    window.open('https://github.com/sameer-sys/claude-enterprise-mobile-apk/releases', '_blank');
   };
 
   const runDemo = () => {
@@ -407,13 +400,15 @@ exit
               </ul>
             </div>
 
-            <button
-              onClick={handleDownloadAndroid}
+            <a
+              href="https://github.com/sameer-sys/claude-enterprise-mobile-apk/releases"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full py-3 px-4 rounded-xl bg-[#25231e] hover:bg-[#302e27] border border-[#3e3b31] text-[#ece9e2] font-bold text-xs shadow-sm transition-all flex items-center justify-center space-x-2 active:scale-95"
             >
               <Download className="w-4 h-4 text-[#cc785c]" />
-              <span>Download Mobile App (.apk / PWA)</span>
-            </button>
+              <span>Download Mobile App (.apk / Releases) ↗</span>
+            </a>
           </div>
 
           {/* Web App Direct Access */}
