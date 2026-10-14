@@ -363,13 +363,15 @@ exit
               </ul>
             </div>
 
-            <button
-              onClick={handleDownloadWindows}
+            <a
+              href="https://github.com/sameer-sys/claude-enterprise-desktop-app/releases"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full py-3 px-4 rounded-xl bg-[#cc785c] hover:bg-[#db8a6e] text-black font-bold text-xs shadow-md transition-all flex items-center justify-center space-x-2 active:scale-95"
             >
               <Download className="w-4 h-4 stroke-[2.5]" />
-              <span>Download for Windows (.bat / .exe)</span>
-            </button>
+              <span>Download for Windows (.exe / Releases) ↗</span>
+            </a>
           </div>
 
           {/* Android Mobile Companion */}
