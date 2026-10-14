@@ -1,7 +1,8 @@
-/** @type {import('next').NextConfig} */
+const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
+
 const nextConfig = {
-  output: 'export',
-  basePath: '/claude-enterprise-website-original',
+  output: isGitHubPages ? 'export' : undefined,
+  basePath: isGitHubPages ? '/claude-enterprise-website-original' : '',
   images: {
     unoptimized: true,
   },
